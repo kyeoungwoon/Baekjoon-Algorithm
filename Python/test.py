@@ -1,5 +1,5 @@
-i = int(input())
-sum=1
-for i in range(1, i+1):
-    sum = sum*i
-print(sum)
+from itertools import permutations
+
+a = ['R', 'R', 'R', 'D', 'D', 'D']
+print(set(permutations(a, 6)))
+print(len(set(permutations(a, 6))))

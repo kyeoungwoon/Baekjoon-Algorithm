@@ -59,3 +59,21 @@ else:
     for x in range (n-1):
         a, b = b, a+b
     print(b)
+
+
+# 행렬을 이용한 코드
+
+def matrix(carr, arr):
+    carr = [carr[0]*arr[0] + carr[1]*arr[2], carr[0]*arr[1] + carr[1]*arr[3], \
+            carr[2]*arr[0] + carr[3]*arr[2], carr[2]*arr[1] + carr[3]*arr[3]]
+    return carr
+        
+carr = [1,1,1,0]
+arr = [1,1,1,0]
+
+n = int(input())
+
+for x in range(n-1):
+    carr = matrix(carr, arr)
+
+print(carr[2])
